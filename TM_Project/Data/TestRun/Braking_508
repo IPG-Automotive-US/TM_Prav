@@ -4,6 +4,7 @@ FileCreator = CarMaker 10.0.1
 Description:
 	Straight line braking maneuver on high mue
 	Measurement of brake distance. See DM.ManDist at the end of last Minimaneuver.
+FileClass.Update = 10.0
 Vehicle = Demo_IPG_CompanyCar
 Trailer =
 Tire.0 =
@@ -28,7 +29,7 @@ TrailerLoad.2.mass = 0
 TrailerLoad.2.pos = 0 0 0
 DrivMan.Cmds:
 	(first() ? Qu::BrakeDist=0); DM.ManNo>0 ? BrakeDist=Delta2Ev(Car.Road.sRoad, change(DM.Brake), Car.v <=0.01)
-	(first() ? Qu::Criteria=1)
+	(first() ? Qu::Criteria=0)
 DrivMan.Init.Velocity = 0
 DrivMan.Init.GearNo = 0
 DrivMan.Init.SteerAng = 0
